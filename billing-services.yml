@@ -1,36 +1,56 @@
-spring.application.name=billing-services
-server.port=8081
+server:
+  port: 8081
+  
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/turi
+    username: Thirumeni
+    password: admin
 
-# DataSource Configuration
-spring.datasource.url=jdbc:postgresql://127.0.0.1:5432/turi
-spring.datasource.username=Thirumeni
-spring.datasource.password=admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
-# PostgreSQL Driver
-spring.datasource.driver-class-name=org.postgresql.Driver
+  boot:
+    message: Hello, Department Service Spring Cloud Bus Demo
 
-# Hibernate / JPA Configuration (optional but common)
-spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
+  mail:
+    host: stridelog-dev-communication-service.unitedstates.communication.azure.com
+    port: 587
+    username: DoNotReply@stridelog.com
+    password: 8YVdNdWvWpHP8P2STR9yvGoDj3eQn4AtcSUgL4ytiX6Qfk6oBFmqJQQJ99BFACULyCphhNdcAAAAAZCSsLZK
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    default-encoding: UTF-8
 
-spring.jpa.hibernate.naming-strategy=org.hibernate.cfg.EJB3NamingStrategy
-jwt.secret=TmV3U2VjcmV0S2V5Rm9ySldUU2lnbmluZ1B1cnBvc2VzMTIzNDU2Nzg
-#spring.profiles.active=prod
-#mail.enabled=true
+mail:
+  enabled: true
 
-# Logging for SQL
-logging.level.org.hibernate.SQL=DEBUG
-logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
-logging.level.org.springframework.jdbc.core.JdbcTemplate=DEBUG
-logging.level.org.springframework.jdbc.core.StatementCreatorUtils=TRACE
+eureka:
+  instance:
+    client:
+      server-url:
+        defaultZone: http://localhost:8761/eureka/
 
-# Gmail SMTP configuration
-spring.mail.host=smtp.gmail.com
-spring.mail.port=587
-spring.mail.username=santhonisamy@stridelog.com
-spring.mail.password=inva grzy ognn ursq
-spring.mail.properties.mail.smtp.auth=true
-spring.mail.properties.mail.smtp.starttls.enable=true
-spring.mail.default-encoding=UTF-8
-mail.enabled=true
+azure:
+  communication:
+    connection-string: endpoint=https://stridelog-dev-communication-service.unitedstates.communication.azure.com/;accesskey=8YVdNdWvWpHP8P2STR9yvGoDj3eQn4AtcSUgL4ytiX6Qfk6oBFmqJQQJ99BFACULyCphhNdcAAAAAZCSsLZK
+
+  email:
+    sender: DoNotReply@91461e57-d25f-4338-8b60-04054eca9297.azurecomm.net
+
+email:
+  service:
+    retry:
+      max-attempts: 3
+      delay-ms: 1000
+jwt:
+  secret: TmV3U2VjcmV0S2V5Rm9ySldUU2lnbmluZ1B1cnBvc2VzMTIzNDU2Nzg        
+    
