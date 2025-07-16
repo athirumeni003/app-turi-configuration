@@ -22,7 +22,7 @@ spring:
     host: stridelog-dev-communication-service.unitedstates.communication.azure.com
     port: 587
     username: DoNotReply@stridelog.com
-    password: 8YVdNdWvWpHP8P2STR9yvGoDj3eQn4AtcSUgL4ytiX6Qfk6oBFmqJQQJ99BFACULyCphhNdcAAAAAZCSsLZK
+    password: "{cipher}f3fb67040baa351a7a449a9acadc7801be723202e2dfffb50736424e76bc69409fd919834c693bb145c3b07f8b1968a80ecf8bf6b92f6c7d03f43296b1e891527dea618d9bbb989bed5666a800ab47a56266f450412d053483fcd6ee074bd809cc12f71f145bc6e467d91475f2274969"
     properties:
       mail:
         smtp:
