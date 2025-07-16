@@ -1,0 +1,57 @@
+server:
+  port: 8087
+  
+spring:
+  datasource:    
+    url: jdbc:postgresql://sl-dev-db.postgres.database.azure.com/turi
+    username: turi_user
+    password: tur1us5r2o25!
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  boot:
+    message: Hello, Department Service Spring Cloud Bus Demo
+
+  mail:
+    host: stridelog-dev-communication-service.unitedstates.communication.azure.com
+    port: 587
+    username: DoNotReply@stridelog.com
+    password: 8YVdNdWvWpHP8P2STR9yvGoDj3eQn4AtcSUgL4ytiX6Qfk6oBFmqJQQJ99BFACULyCphhNdcAAAAAZCSsLZK
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    default-encoding: UTF-8
+
+mail:
+  enabled: true
+
+eureka:
+  instance:
+    client:
+      server-url:
+        defaultZone: http://localhost:8761/eureka/
+
+azure:
+  communication:
+    connection-string: endpoint=https://stridelog-dev-communication-service.unitedstates.communication.azure.com/;accesskey=8YVdNdWvWpHP8P2STR9yvGoDj3eQn4AtcSUgL4ytiX6Qfk6oBFmqJQQJ99BFACULyCphhNdcAAAAAZCSsLZK
+
+  email:
+    sender: DoNotReply@91461e57-d25f-4338-8b60-04054eca9297.azurecomm.net
+
+email:
+  service:
+    retry:
+      max-attempts: 3
+      delay-ms: 1000
+jwt:
+  secret: TmV3U2VjcmV0S2V5Rm9ySldUU2lnbmluZ1B1cnBvc2VzMTIzNDU2Nzg        
+    
