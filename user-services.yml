@@ -3,7 +3,7 @@ server:
   
 spring:
   datasource:    
-    url: jdbc:postgresql://sl-dev-db.postgres.database.azure.com/turi-user
+    url: jdbc:postgresql://sl-dev-db.postgres.database.azure.com/turi
     username: turi_user
     password: tur1us5r2o25!
     driver-class-name: org.postgresql.Driver
