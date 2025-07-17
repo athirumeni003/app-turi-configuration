@@ -22,7 +22,7 @@ spring:
     host: stridelog-dev-communication-service.unitedstates.communication.azure.com
     port: 587
     username: DoNotReply@stridelog.com
-    password: "{cipher}f3fb67040baa351a7a449a9acadc7801be723202e2dfffb50736424e76bc69409fd919834c693bb145c3b07f8b1968a80ecf8bf6b92f6c7d03f43296b1e891527dea618d9bbb989bed5666a800ab47a56266f450412d053483fcd6ee074bd809cc12f71f145bc6e467d91475f2274969"
+    password: '{cipher}a55545f02aaa30a4e910cdd64453dae1d91c8dc690dfd2d43906e4dbb062b25ce04e7ae652e20edb79fb813ce0300d38c0856386e80e64782d35120f1e9231688ddd6313d3af52a30e28934838d0786f1e6dc090871533130cf720896c2c12fcd5309e070a40cf23837fbc5ba34e06eb'
     properties:
       mail:
         smtp:
@@ -53,5 +53,5 @@ email:
       max-attempts: 3
       delay-ms: 1000
 jwt:
-  secret: 7b5b2b31063f90401d0a9aac4e549547ef45b6d441f29ace8768c7db6203a79391a6f0385b32ccff7ac276063b3f4fe257bc119becd76328543631928637b340b16944349d56fbb3f84b0983283abd31      
+  secret: '{cipher}0902fbf78caa03bdcb712c18d510500d79a8def6eac7af0cee847afe48057781e939f63a41ac9367d78c7b90e0db6cda0a71d00ba59963803e222209387a2bba11d934f22d320cb7d3c51db26bfa151a'      
     
