@@ -1,0 +1,39 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: apigateway
+
+  zipkin:
+    base-url: http://127.0.0.1:9411/
+
+  sleuth:
+    sampler:
+      probability: 1.0
+
+  cloud:
+    gateway:
+      routes:
+        - id: invoice-services
+          uri: http://localhost:8087
+          predicates:
+            - Path=/invoice/**
+        - id: user-services
+          uri: http://localhost:8082
+          predicates:
+            - Path=/user/**
+        - id: vessel-services
+          uri: http://localhost:8084
+          predicates:
+            - Path=/vesselVisit/**
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+jwt:
+  secret: TmV3U2VjcmV0S2V5Rm9ySldUU2lnbmluZ1B1cnBvc2VzMTIzNDU2Nzg=
