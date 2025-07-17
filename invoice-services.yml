@@ -53,5 +53,5 @@ email:
       max-attempts: 3
       delay-ms: 1000
 jwt:
-  secret: TmV3U2VjcmV0S2V5Rm9ySldUU2lnbmluZ1B1cnBvc2VzMTIzNDU2Nzg      
+  secret: TmV3U2VjcmV0S2V5Rm9ySldUU2lnbmluZ1B1cnBvc2VzMTIzNDU2Nzg=
     
