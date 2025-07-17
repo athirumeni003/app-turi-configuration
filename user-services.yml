@@ -53,6 +53,6 @@ email:
       max-attempts: 3
       delay-ms: 1000
 jwt:
-  secret: '{cipher}0902fbf78caa03bdcb712c18d510500d79a8def6eac7af0cee847afe48057781e939f63a41ac9367d78c7b90e0db6cda0a71d00ba59963803e222209387a2bba11d934f22d320cb7d3c51db26bfa151a'
+  secret: TmV3U2VjcmV0S2V5Rm9ySldUU2lnbmluZ1B1cnBvc2VzMTIzNDU2Nzg
 
     
